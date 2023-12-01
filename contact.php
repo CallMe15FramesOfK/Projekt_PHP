@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
     <link rel="stylesheet" href="./styles/style_contact.css">
+    <script>
+    window.onload = function() {
+        setTimeout(function() {
+            alert('Komentarz wysłany!');
+        }, 500);
+    };
+</script>
 </head>
 <body>
 <header>
