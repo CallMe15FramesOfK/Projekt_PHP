@@ -49,6 +49,6 @@
         </form>
     </main>
     <footer>
-        <p>&copy; 2023 Sklep dla graczy. Wszelkie prawa zastrzeżone.</p>
+        <p>&copy; 2023 Sklep dla graczy. <a href="./contact.php">Kontakt</a></p>
 </body>
 </html>
