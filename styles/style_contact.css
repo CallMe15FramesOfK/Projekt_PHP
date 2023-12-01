@@ -6,16 +6,18 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #F0ECE5;
+    color: #161A30;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #161A30;
     padding: 20px;
 }
 
 header h1 {
     margin: 0;
-    color: #fff;
+    color: #B6BBC4;
 }
 
 nav ul {
@@ -30,7 +32,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #B6BBC4;
 }
 
 main {
@@ -68,8 +70,8 @@ main form textarea {
 }
 
 main form input[type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
+    background-color: #31304D;
+    color: #B6BBC4;
     padding: 5px 10px;
     border: none;
     cursor: pointer;
@@ -79,8 +81,8 @@ main ul{
 }
 
 footer {
-    background-color: #4CAF50;
+    background-color: #31304D;
     padding: 20px;
     text-align: center;
-    color: #fff;
+    color: #B6BBC4;
 }
