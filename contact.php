@@ -1,42 +1,32 @@
 <?php
 
-// Replace with your actual database credentials
 $db_host = 'localhost';
 $db_name = 'gamingshop';
 $db_user = 'root';
 $db_pass = '';
 
 try {
-    // Create a new PDO connection
     $conn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
 
-    // Set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Check if the form has been submitted
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        // Get the submitted data
         $name = trim($_POST['name']);
         $email = trim($_POST['email']);
         $message = trim($_POST['message']);
 
-        // Check if any of the input fields are empty
         if (empty($email) || empty($message)) {
             echo "<p>Proszę wypełnić wszystkie pola formularza.</p>";
         } else {
-            // Prepare the SQL query
             $sql = "INSERT INTO comments (name, email, message) VALUES (:name, :email, :message)";
             $stmt = $conn->prepare($sql);
 
-            // Bind the submitted data to the prepared statement
             $stmt->bindParam(':name', $name);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':message', $message);
 
-            // Execute the prepared statement
             $stmt->execute();
 
-            // Redirect the user to the comments page
             header('Location: contact.php');
             exit;
         }
@@ -51,15 +41,15 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Kontakt</title>
     <link rel="stylesheet" href="./styles/style_contact.css">
 </head>
 <body>
 <header>
-        <h1>Witamy w sklepie dla graczy</h1>
+        <h1>Sklep dla graczy</h1>
         <nav>
             <ul>
-                <li><a href="./index.php">Strona Główna</a></li>
+                <li><a href="./index.php" >Strona Główna</a></li>
                 <li><a href="./games.php">Gry</a></li>
                 <li><a href="./console.php">Konsole</a></li>
                 <li><a href="./contact.php">Kontakt</a></li>
