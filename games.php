@@ -13,7 +13,6 @@
             <ul>
                 <li><a href="./index.php">Strona Główna</a></li>
                 <li><a href="./games.php">Gry</a></li>
-                <li><a href="./console.php">Konsole</a></li>
                 <li><a href="./log_in.php">Logowanie</a></li>
             </ul>
         </nav>

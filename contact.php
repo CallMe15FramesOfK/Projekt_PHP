@@ -1,14 +1,8 @@
 <?php
 
-$db_host = 'localhost';
-$db_name = 'gamingshop';
-$db_user = 'root';
-$db_pass = '';
-
+include "./PHP_connections/connection.php";
 try {
-    $conn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
-
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $name = trim($_POST['name']);
@@ -51,7 +45,6 @@ try {
             <ul>
                 <li><a href="./index.php" >Strona Główna</a></li>
                 <li><a href="./games.php">Gry</a></li>
-                <li><a href="./console.php">Konsole</a></li>
                 <li><a href="./log_in.php">Zaloguj</a></li>
             </ul>
         </nav>

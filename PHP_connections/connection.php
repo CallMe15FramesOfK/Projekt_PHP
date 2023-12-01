@@ -5,11 +5,12 @@ $db_name = 'gamingshop';
 $db_user = 'root';
 $db_pass = '';
 
-$conn = mysqli_connect($db_host, $db_name, $db_user, $db_pass);
+try {
+    $conn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
 
-if (!$conn) {
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    echo "Connection failed!";
-
+}catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
 }
 ?>
