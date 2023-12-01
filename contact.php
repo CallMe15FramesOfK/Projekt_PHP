@@ -52,7 +52,6 @@ try {
                 <li><a href="./index.php" >Strona Główna</a></li>
                 <li><a href="./games.php">Gry</a></li>
                 <li><a href="./console.php">Konsole</a></li>
-                <li><a href="./contact.php">Kontakt</a></li>
                 <li><a href="./log_in.php">Zaloguj</a></li>
             </ul>
         </nav>
@@ -82,6 +81,5 @@ try {
     </main>
     <footer>
         <p>&copy; 2023 Sklep dla graczy. Wszelkie prawa zastrzeżone.</p>
-    </footer>
 </body>
 </html>
