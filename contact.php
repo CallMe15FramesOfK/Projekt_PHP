@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="styles/style_contact.css">
+    <link rel="stylesheet" href="./styles/style_contact.css">
 </head>
 <body>
     <header>
         <h1>Welcome to the Gaming Shop</h1>
         <nav>
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="games.php">Games</a></li>
-                <li><a href="console.php">Consoles</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="./index.php">Home</a></li>
+                <li><a href="./games.php">Games</a></li>
+                <li><a href="./console.php">Consoles</a></li>
+                <li><a href="./contact.php">Contact</a></li>
+                <li><a href="./log_in.php">Log in</a></li>
             </ul>
         </nav>
     </header>
