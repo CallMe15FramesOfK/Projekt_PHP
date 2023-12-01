@@ -3,23 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Website</title>
+    <title>Gaming Shop</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <h1>Welcome to the Gaming Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="games.php">Games</a></li>
+                <li><a href="console.php">Consoles</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="container">
-        <h1>Welcome to Our Website</h1>
-        <h2>Ziomek</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit delectus itaque doloribus, ad deleniti tempore alias odio, iusto nam deserunt, consequuntur et assumenda cum eligendi ex hic reprehenderit dicta. Tempora.</p>
-    </div>
+    <main>
+        <section class="featured">
+            <h2>Featured Games</h2>
+            <ul>
+                <li>Game 1</li>
+                <li>Game 2</li>
+                <li>Game 3</li>
+            </ul>
+        </section>
+        <section class="upcoming">
+            <h2>Upcoming Games</h2>
+            <ul>
+                <li>Game 4</li>
+                <li>Game 5</li>
+                <li>Game 6</li>
+            </ul>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2022 My Website. All rights reserved.</p>
+        <p>&copy; 2022 Gaming Shop. All rights reserved.</p>
     </footer>
 </body>
 </html>
