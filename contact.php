@@ -1,35 +1,3 @@
-<?php
-
-include "./PHP_connections/connection.php";
-try {
-    
-
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $name = trim($_POST['name']);
-        $email = trim($_POST['email']);
-        $message = trim($_POST['message']);
-
-        if (empty($email) || empty($message)) {
-            echo "<p>Proszę wypełnić wszystkie pola formularza.</p>";
-        } else {
-            $sql = "INSERT INTO comments (name, email, message) VALUES (:name, :email, :message)";
-            $stmt = $conn->prepare($sql);
-
-            $stmt->bindParam(':name', $name);
-            $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':message', $message);
-
-            $stmt->execute();
-
-            header('Location: contact.php');
-            exit;
-        }
-    }
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +27,7 @@ try {
         </ul>
 
         <h2>Lub wyślij do nas wiadomość:</h2>
-        <form action="contact.php" method="post">
+        <form action="./comment.php" method="post">
             <label for="name">Nazwa:</label>
             <input type="text" id="name" name="name" required>
             <br>
@@ -69,8 +37,13 @@ try {
             <label for="message">Wiadomość:</label>
             <textarea id="message" name="message" required></textarea>
             <br>
-            <input type="submit" value="Wyślij">
+            <input type="submit" value="Wyślij" name="submit">
         </form>
+        <?php
+        if (isset($_POST['submit'])) {
+            echo "<script>alert('Komentarz wysłany');</script>";
+        }
+        ?>
     </main>
     <footer>
         <p>&copy; 2023 Sklep dla graczy. Wszelkie prawa zastrzeżone.</p>
