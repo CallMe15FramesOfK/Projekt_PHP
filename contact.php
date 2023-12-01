@@ -16,7 +16,7 @@ try {
     // Check if the form has been submitted
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Get the submitted data
-        $name = $_SESSION['user'];
+        $name = trim($_POST['name']);
         $email = trim($_POST['email']);
         $message = trim($_POST['message']);
 
@@ -37,7 +37,7 @@ try {
             $stmt->execute();
 
             // Redirect the user to the comments page
-            header('Location: comments.php');
+            header('Location: contact.php');
             exit;
         }
     }
@@ -77,7 +77,10 @@ try {
         </ul>
 
         <h2>Lub wyślij do nas wiadomość:</h2>
-        <form action="send_mail.php" method="post">
+        <form action="contact.php" method="post">
+            <label for="name">Nazwa:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             <br>
