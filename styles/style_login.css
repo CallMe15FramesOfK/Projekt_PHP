@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #F0ECE5;
+    color: #161A30;
 }
 .container {
     width: 100%;
@@ -48,4 +49,11 @@ body {
 }
 .signin-link a:hover {
     color: #F0ECE5;
+}
+.error{
+    color: #161A30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
 }

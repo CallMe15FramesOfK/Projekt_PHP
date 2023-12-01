@@ -21,7 +21,7 @@ try {
 
             $stmt->execute();
 
-            header('Location: contact.php');
+            header('Location: contact.php?error=Komentarz wysłano!');
             
             exit;
         }

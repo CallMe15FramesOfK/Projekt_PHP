@@ -95,3 +95,10 @@ footer {
 .onsite{
     color: #F0ECE5;
 }
+.error{
+    color: #161A30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}

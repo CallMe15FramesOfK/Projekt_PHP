@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
     <link rel="stylesheet" href="./styles/style_contact.css">
-    <script>
-    window.onload = function() {
-        setTimeout(function() {
-            alert('Komentarz wysłany!');
-        }, 500);
-    };
-</script>
 </head>
 <body>
 <header>
@@ -35,6 +28,14 @@
 
         <h2>Lub wyślij do nas wiadomość:</h2>
         <form action="./comment.php" method="post">
+        <?php if (isset($_GET['error'])) {?>
+                <style>
+                    body{
+                        background-color: #9ADE7B;
+                    }
+                </style>
+                <p class="error"><?php echo $_GET['error']; ?></p>
+            <?php }?>
             <label for="name">Nazwa:</label>
             <input type="text" id="name" name="name" required>
             <br>
@@ -46,11 +47,6 @@
             <br>
             <input type="submit" value="Wyślij" name="submit">
         </form>
-        <?php
-        if (isset($_POST['submit'])) {
-            echo "<script>alert('Komentarz wysłany');</script>";
-        }
-        ?>
     </main>
     <footer>
         <p>&copy; 2023 Sklep dla graczy. Wszelkie prawa zastrzeżone.</p>
