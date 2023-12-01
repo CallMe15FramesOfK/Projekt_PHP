@@ -15,6 +15,7 @@
     </header>
     <div class="container">
         <h1>Welcome to Our Website</h1>
+        <h2>Ziomek</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit delectus itaque doloribus, ad deleniti tempore alias odio, iusto nam deserunt, consequuntur et assumenda cum eligendi ex hic reprehenderit dicta. Tempora.</p>
     </div>
     <footer>
