@@ -27,7 +27,7 @@
                 $result = $conn->query($sql);
                 if ($result->rowCount() > 0) {
                     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<li>" . $row["game_name"] . "</li>";
+                        echo "<li>" . $row["game_name"], " ", $row["game_price"], " PLN.". "</li>";
                     }
                 } else {
                     echo "0 results";

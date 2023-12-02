@@ -8,9 +8,9 @@
 </head>
 <body>
     <div class="container">
-        <form class="login-form">
-            <input type="text" placeholder="Nazwa użytkownika" required>
-            <input type="password" placeholder="Hasło" required>
+        <form action="./login.php" method="post" class="login-form">
+        <input type="text" id="username" name="username" placeholder="Nazwa użytkownika" required>
+        <input type="password" id="password" name="password" placeholder="Hasło" required>
             <button type="submit">Zaloguj</button>
             <div class="signin-link">
                 <p>Nie posiadasz jeszcze konta? <a href="./signup.php">Zarejestruj się.</a></p>
