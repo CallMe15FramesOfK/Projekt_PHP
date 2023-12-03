@@ -13,7 +13,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel admina</title>
-    <link rel="stylesheet" href="./styles/style_main.css">
+    <link rel="stylesheet" href="./styles/style_admin.css">
 </head>
 
 <body>
@@ -36,7 +36,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     <main>
         <section class="admin-section">
             <h2>Panel admina:</h2>
-            <form action="./add_game_script.php" method="post">
+            <form action="./add_game_script.php" method="post" class="panel">
                 <?php if (isset($_GET['error'])) {?>
                     <style>
                         body{
@@ -52,13 +52,6 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
                 <input type="number" id="game_price" name="game_price" min="0" step="0.01" required>
                 <br>
                 <input type="submit" value="Dodaj grę">
-            </form>
-            <br>
-            <form action="./delete_game_script.php" method="post">
-                <label for="game_name">Nazwa gry do usunięcia:</label>
-                <input type="text" id="game_name" name="game_name" required>
-                <br>
-                <input type="submit" value="Usuń grę">
             </form>
         </section>
     </main>
