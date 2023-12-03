@@ -4,34 +4,35 @@
 <ul>
 <li>Zimportowanie pliku GamingShopDB.sql</li> 
 <li>Umieszczenie projektu w /xampp/htdocs</li>
-<li>Uruchomienie XAMPP i otworzenie strony localhost/phpsql</li>
+<li>Uruchomienie XAMPP i otworzenie strony localhost/Projekt_PHP</li>
 </ul>
 <h2>Konfiguracja:</h2>
 
-Po uruchomieniu strony, można zalogować się na użytkownika admin o haśle: admin. Przy próbie połączenia z bazą danych, która nie istnieje zostanie ona utworzona wraz z użytkownikiem admin.
-Opis funkcji: Po uruchomieniu strony jako niezalogowany użytkownik mamy dostęp do:
+Po uruchomieniu strony, można zalogować się na użytkownika admin (hasło: admin). 
 
-Strony głównej
-Logowania
-Rejestrowania
-Przeglądania listy kursów
+<h2>Opis funkcji:</h2>
+<ul>
+  Po uruchomieniu strony jako niezalogowany użytkownik mamy dostęp do:
+
+<li>Strony głównej</li>
+<li>Logowania</li>
+    <ul>
+      <li>Jeśli gość nie ma konta może się zarejestrować (otrzyma rangę client)</li>
+    </ul>
+
+<li>Przeglądanie Gry</li>
+</ul>
+
+<ul>
 Jako zalogowany użytkownik, zyskujemy dodatkowo możliwość:
 
-Wyświetlania kursów
-Ukończenia kursów
-Po ukończeniu kursu oceny go w skali 1-5
-W panelu użytkownika:
-Dodawania
-Usuwania
-Edytowania własnych kursów
-Zmiany hasła
-Zmiany nazwy użytkownika
-Wylogowywania się
-Wyświetlenia profilu, na którym widnieją nasze ukończone kursy
+<li>Możliwość zakupu Gier</li>
+<li>Możliwość kontaktu z administratorami</li>
+<li>Wylogowywania się</li>
+</ul>
+<ul>
 Jako administrator zyskujemy dodatkowo możliwość:
 
-Otworzenia panelu administratora, w którym możemy:
-Zmieniać uprawnienia (role) użytkowników
-Usuwać użytkowników (co powoduje również usunięcie ich kursów oraz ocen)
-Edytować kursy użytkowników
-Usuwać kursy użytkowników (co powoduje również usunięcie ocen konkretnego kursu)
+<li>Dodania gier do listy</li>
+
+</ul>
