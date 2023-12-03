@@ -32,7 +32,7 @@ Jako zalogowany użytkownik, zyskujemy dodatkowo możliwość:
 </ul>
 <ul>
 Jako administrator zyskujemy dodatkowo możliwość:
-
+<li>Panelu Administratora</li>
 <li>Dodania gier do listy</li>
 
 </ul>
