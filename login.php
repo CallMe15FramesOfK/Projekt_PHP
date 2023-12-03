@@ -17,7 +17,7 @@ try {
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($user === false) {
-                echo "<p>Nie ma takiego użytkownika.</p>";
+                header('Location: log_in.php?error=Błędna nazwa użytkownika!');
             } else {
                 $hashed_password = $user['password'];
 
@@ -25,7 +25,7 @@ try {
                     header('Location: index.php');
                     exit;
                 } else {
-                    echo "<p>Niepoprawne hasło.</p>";
+                    header('Location: log_in.php?error=Błędne hasło!');
                 }
             }
         }
