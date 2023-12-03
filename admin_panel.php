@@ -23,11 +23,8 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
             <ul>
                 <li><a href="./index.php">Strona Główna</a></li>
                 <li><a href="./games.php">Gry</a></li>
-                <?php if (!isset($_SESSION['logged_in'])) : ?>
+                <?php if ($_SESSION['user']['rank'] == 'admin') : ?>
                 <li><a href="./admin_panel.php">Panel admina</a></li>   
-                <?php endif; ?>
-                <?php if (!isset($_SESSION['logged_in'])) : ?>
-                <li><a href="./log_in.php">Logowanie</a></li>
                 <?php endif; ?>
                 <?php if (isset($_SESSION['logged_in'])) : ?>
                     <li><a href="./log_out.php">Wylogowanie</a></li>
