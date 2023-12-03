@@ -9,9 +9,9 @@ $stmt = $conn->prepare($sql);
 $stmt->bindParam(':game_name', $game_name);
 
 if ($stmt->execute()) {
-    header('Location: admin_panel.php?error=Gra została usunięta!');
+    header('Location: admin_console.php?error=Gra została usunięta!');
 } else {
-    header('Location: admin_panel.php?error=Wystąpił błąd podczas usuwania gry!');
+    header('Location: admin_console.php?error=Wystąpił błąd podczas usuwania gry!');
 }
 
 ?>

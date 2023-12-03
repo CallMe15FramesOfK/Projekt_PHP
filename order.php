@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-    session_start();
-?>
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +7,12 @@
     <title>Zakup gry</title>
     <link rel="stylesheet" href="./styles/style_purchase.css">
 </head>
+<?php
+    session_start();
+    if (!isset($_SESSION['logged_in'])):
+        header("Location: log_in.php");
+    endif;
+?>
 
 <body>
     <header>
@@ -19,7 +22,8 @@
                 <li><a href="./index.php">Strona Główna</a></li>
                 <li><a href="./games.php">Gry</a></li>
                 <?php if (isset($_SESSION['logged_in'])) :
-                    if ($_SESSION['user']['rank'] === 'admin') : ?><li><a href="./admin_panel.php">Panel admina</a></li>   <?php endif; endif;?>
+                    if ($_SESSION['user']['rank'] === 'admin') : ?><li><a href="./admin_console.php">Panel admina</a></li>   <?php endif; endif;?>
+                    <li><a href="./order.php">Zakup</a></li>
                 <?php if (!isset($_SESSION['logged_in'])) : ?><li><a href="./log_in.php">Logowanie</a></li><?php endif; ?>
                 <?php if (isset($_SESSION['logged_in'])) : ?><li><a href="./log_out.php">Wylogowanie</a></li><?php endif; ?>
             </ul>
@@ -33,7 +37,15 @@
     <main>
         <section class="purchase">
             <h2>Zakup gry:</h2>
-            <form action="./PHP_connections/process_purchase.php" method="post" class="purchase">
+            <form action="./order_script.php" method="post" class="purchase">
+                <?php if (isset($_GET['error'])) {?>
+                    <style>
+                        body{
+                            background-color: #9ADE7B;
+                        }
+                    </style>
+                    <p class="error"><b><?php echo $_GET['error']; ?></b></p>
+                <?php }?>
                 <label for="game_name">Wybierz grę:</label>
                 <select name="game_name" id="game_name" required>
                     <?php

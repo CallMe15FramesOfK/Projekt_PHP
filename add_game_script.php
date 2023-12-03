@@ -11,9 +11,9 @@ $stmt->bindParam(':game_name', $game_name);
 $stmt->bindParam(':game_price', $game_price);
 
 if ($stmt->execute()) {
-    header('Location: admin_panel.php?error=Gra została dodana!');
+    header('Location: admin_console.php?error=Gra została dodana!');
 } else {
-    header('Location: admin_panel.php?error=Wystąpił błąd podczas dodawania gry!');
+    header('Location: admin_console.php?error=Wystąpił błąd podczas dodawania gry!');
 }
 
 ?>

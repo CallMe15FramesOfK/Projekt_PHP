@@ -21,8 +21,9 @@
                 <li><a href="./games.php">Gry</a></li>
                 <?php if (isset($_SESSION['logged_in'])) :
                     if ($_SESSION['user']['rank'] === 'admin') : ?>
-                <li><a href="./admin_panel.php">Panel admina</a></li>   
+                <li><a href="./admin_console.php">Panel admina</a></li>   
                 <?php endif; endif;?>
+                <li><a href="./order.php">Zakup</a></li>
                 <?php if (!isset($_SESSION['logged_in'])) : ?>
                 <li><a href="./log_in.php">Logowanie</a></li>
                 <?php endif; ?>
@@ -42,7 +43,7 @@
         </ul>
 
         <h2>Lub wyślij do nas wiadomość:</h2>
-        <form action="./comment.php" method="post">
+        <form action="./contact_script.php" method="post">
         <?php if (isset($_GET['error'])) {?>
                 <style>
                     body{

@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="./login.php" method="post" class="login-form">
+        <form action="./log_in_script.php" method="post" class="login-form">
         <?php if (isset($_GET['error'])) {?>
                 <style>
                     body{
@@ -21,7 +21,7 @@
         <input type="password" id="password" name="password" placeholder="Hasło" required>
             <button type="submit">Zaloguj</button>
             <div class="signin-link">
-                <p>Nie posiadasz jeszcze konta? <a href="./signup.php">Zarejestruj się.</a></p>
+                <p>Nie posiadasz jeszcze konta? <a href="./sign_up.php">Zarejestruj się.</a></p>
                 <p><a href="./index.php">Wróć na stronę główną.</a></p>
             </div>
         </form>

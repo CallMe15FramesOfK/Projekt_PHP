@@ -26,7 +26,7 @@ try {
                    if ($user['rank'] == 'admin') {
                         $_SESSION['user'] = $user;
                         $_SESSION['logged_in'] = true;
-                       header('Location: admin_panel.php');
+                       header('Location: admin_console.php');
                        exit;
                    }
 

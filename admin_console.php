@@ -24,8 +24,9 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
                 <li><a href="./index.php">Strona Główna</a></li>
                 <li><a href="./games.php">Gry</a></li>
                 <?php if ($_SESSION['user']['rank'] == 'admin') : ?>
-                <li><a href="./admin_panel.php">Panel admina</a></li>   
+                <li><a href="./admin_console.php">Panel admina</a></li>   
                 <?php endif; ?>
+                <li><a href="./order.php">Zakup</a></li>
                 <?php if (isset($_SESSION['logged_in'])) : ?>
                     <li><a href="./log_out.php">Wylogowanie</a></li>
                 <?php endif; ?>
@@ -35,7 +36,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     <main>
         <section class="admin-section">
             <h2>Panel admina:</h2>
-            <form action="./add_game.php" method="post">
+            <form action="./add_game_script.php" method="post">
                 <?php if (isset($_GET['error'])) {?>
                     <style>
                         body{
@@ -53,7 +54,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
                 <input type="submit" value="Dodaj gre">
             </form>
             <br>
-            <form action="./remove_game.php" method="post">
+            <form action="./delete_game_script.php" method="post">
                 <label for="game_name">Nazwa gry do usunięcia:</label>
                 <input type="text" id="game_name" name="game_name" required>
                 <br>

@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="./register.php" method="post" class="login-form">
+        <form action="./sign_up_script.php" method="post" class="login-form">
             <?php if (isset($_GET['error'])) {?>
                 <style>
                     body{
