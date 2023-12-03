@@ -6,6 +6,9 @@
     <title>Kontakt</title>
     <link rel="stylesheet" href="./styles/style_contact.css">
 </head>
+<?php
+    session_start();
+?>
 <body>
 <header>
         <h1>Sklep dla graczy</h1>
@@ -13,7 +16,12 @@
             <ul>
                 <li><a href="./index.php" >Strona Główna</a></li>
                 <li><a href="./games.php">Gry</a></li>
+                <?php if (!isset($_SESSION['logged_in'])) : ?>
                 <li><a href="./log_in.php">Logowanie</a></li>
+                <?php endif; ?>
+                <?php if (isset($_SESSION['logged_in'])) : ?>
+                    <li><a href="./log_out.php">Wylogowanie</a></li>
+                <?php endif; ?>
             </ul>
         </nav>
     </header>
