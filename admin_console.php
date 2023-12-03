@@ -51,14 +51,14 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
                 <label for="game_price">Cena gry:</label>
                 <input type="number" id="game_price" name="game_price" min="0" step="0.01" required>
                 <br>
-                <input type="submit" value="Dodaj gre">
+                <input type="submit" value="Dodaj grę">
             </form>
             <br>
             <form action="./delete_game_script.php" method="post">
                 <label for="game_name">Nazwa gry do usunięcia:</label>
                 <input type="text" id="game_name" name="game_name" required>
                 <br>
-                <input type="submit" value="Usuń gre">
+                <input type="submit" value="Usuń grę">
             </form>
         </section>
     </main>

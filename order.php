@@ -81,7 +81,7 @@
                     <option value="cash">Gotówka</option>
                 </select>
                 <br>
-                <input type="submit" value="Zakup">
+                <input type="submit" value="Wyślij">
             </form>
         </section>
     </main>
