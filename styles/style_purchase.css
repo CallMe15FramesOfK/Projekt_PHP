@@ -1,0 +1,142 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #F0ECE5;
+    color: #161A30;
+}
+
+header {
+    background-color: #161A30;
+    padding: 20px;
+}
+
+header h1 {
+    color: #B6BBC4;
+    margin: 0;
+}
+header nav ul {
+    float: right;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #B6BBC4;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: #F0ECE5;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main h2 {
+    margin-bottom: 20px;
+    
+}
+main h2 a{
+    text-decoration: none;
+    color: #161A30;
+}
+main h2 a:hover{
+    color:#B6BBC4;
+}
+
+main ul {
+    padding: 0;
+
+}
+
+main ul li {
+    background-color: #B6BBC4;
+    border: 1px solid #31304D;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    text-decoration: none;
+    width: 25%;
+}
+
+footer {
+    background-color: #31304D;
+    padding: 20px;
+    text-align: right;
+    color: #B6BBC4;
+}
+footer a{
+    color: #B6BBC4;
+    text-decoration: none;
+}
+footer a:hover{
+    color: #F0ECE5;
+    text-decoration: none;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    background-color: #B6BBC4;
+    border: 1px solid #31304D;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+.purchase input[type="game_name"], .purchase input[type="text"], .purchase input[type="payment_method"] {
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #31304D;
+    border-radius: 3px;
+    outline: none;
+}
