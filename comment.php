@@ -1,32 +1,26 @@
 <?php
 
 include "./PHP_connections/connection.php";
-try {
-    
+session_start();
 
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $name = trim($_POST['name']);
-        $email = trim($_POST['email']);
-        $message = trim($_POST['message']);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $message = trim($_POST['message']);
+    $user_ID = trim($_SESSION['user']['ID']);
+    if (empty($message)) {
+        echo "<p>Proszę wypełnić wszystkie pola formularza.</p>";
+    } else {
+        $sql = "INSERT INTO comments (user_ID, message) VALUES (:user_ID, :message)";
+        $stmt = $conn->prepare($sql);
 
-        if (empty($email) || empty($message)) {
-            echo "<p>Proszę wypełnić wszystkie pola formularza.</p>";
-        } else {
-            $sql = "INSERT INTO comments (name, email, message) VALUES (:name, :email, :message)";
-            $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':user_ID', $_SESSION['user']['ID']);
+        $stmt->bindParam(':message', $message);
 
-            $stmt->bindParam(':name', $name);
-            $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':message', $message);
+        $stmt->execute();
 
-            $stmt->execute();
-
-            header('Location: contact.php?error=Komentarz wysłano!');
-            
-            exit;
-        }
+        header('Location: contact.php?error=Komentarz wysłano!');
+        
+        exit;
     }
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
 }
+
 ?>

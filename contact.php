@@ -8,6 +8,9 @@
 </head>
 <?php
     session_start();
+    if (!isset($_SESSION['logged_in'])):
+        header("Location: log_in.php");
+    endif;
 ?>
 <body>
 <header>
@@ -48,12 +51,6 @@
                 </style>
                 <p class="error"><?php echo $_GET['error']; ?></p>
             <?php }?>
-            <label for="name">Nazwa:</label>
-            <input type="text" id="name" name="name" required>
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br>
             <label for="message">Wiadomość:</label>
             <textarea id="message" name="message" required></textarea>
             <br>

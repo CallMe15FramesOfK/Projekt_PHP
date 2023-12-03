@@ -11,7 +11,7 @@ try {
        if (empty($username) || empty($password)) {
            echo "<p>Proszę wypełnić wszystkie pola formularza.</p>";
        } else {
-           $sql = "SELECT username, password, rank FROM users WHERE username = :username";
+           $sql = "SELECT username, password, rank, ID FROM users WHERE username = :username";
            $stmt = $conn->prepare($sql);
            $stmt->bindParam(':username', $username);
            $stmt->execute();
