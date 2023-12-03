@@ -31,20 +31,28 @@
             </div> <?php endif; ?>
     </header>
     <main>
-        <section class="sale">
-            <h2><a href="./games.php">Gry na promocji</a></h2>
-            <ul>
-                <li>Gra 1</li>
-                <li>Gra 2</li>
-                <li>Gra 3</li>
-            </ul>
+        <section class="about">
+            <h2>O sklepie:</h2>
+            <p>Sklep dla graczy to miejsce, gdzie każdy znajdzie coś dla siebie. <br>
+            Sprzedajemy zarówno klasyczne, jak i nowoczesne gry. <br>
+            Chcemy, aby wszyscy odnaleźli coś dla siebie w naszym sklepie. <br>
+            Więc przeglądaj naszą ofertę i sprawdź, czy jesteśmy właściwym miejscem dla Ciebie!</p>
         </section>
-        <section class="upcoming">
-            <h2><a href="./games.php">Nadchodzące gry</a></h2>
+        <section class="highlight">
+            <h2><a href="./games.php">Wyróżnione gry:</a></h2>
             <ul>
-                <li>Gra 4</li>
-                <li>Gra 5</li>
-                <li>Gra 6</li>
+                <?php
+                include "./PHP_connections/connection.php";
+                $sql = "SELECT * FROM games";
+                $result = $conn->query($sql);
+                if ($result->rowCount() > 0) {
+                    while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                        echo "<li>" . $row["game_name"], " ", $row["game_price"], " PLN.". "</li>";
+                    }
+                } else {
+                    echo "0 results";
+                }
+                ?>
             </ul>
         </section>
     </main>

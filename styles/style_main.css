@@ -91,3 +91,11 @@ footer a:hover{
 .user-welcome{
     color: #F0ECE5;
 }
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
