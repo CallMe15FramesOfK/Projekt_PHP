@@ -24,7 +24,7 @@ try {
 
                if (password_verify($password, $hashed_password)) {
                    if ($user['rank'] == 'admin') {
-                        $_SESSION['user'] = $username;
+                        $_SESSION['user'] = $user;
                         $_SESSION['logged_in'] = true;
                        header('Location: admin_panel.php');
                        exit;

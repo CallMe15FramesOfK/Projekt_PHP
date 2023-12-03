@@ -27,7 +27,7 @@
             </ul>
             </nav> <?php if (isset($_SESSION['logged_in'])) : ?>
             <div class="user-welcome">
-            <p>Witaj, użytkowniku</p>
+            <p>Witaj, <?php echo $_SESSION['user']['username']; ?></p>
             </div> <?php endif; ?>
     </header>
     <main>
