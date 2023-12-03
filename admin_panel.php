@@ -35,7 +35,15 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     <main>
         <section class="admin-section">
             <h2>Panel admina:</h2>
-            <form action="./PHP_connections/add_game.php" method="post">
+            <form action="./add_game.php" method="post">
+                <?php if (isset($_GET['error'])) {?>
+                    <style>
+                        body{
+                            background-color: #9ADE7B;
+                        }
+                    </style>
+                    <p class="error"><?php echo $_GET['error']; ?></p>
+                <?php }?>
                 <label for="game_name">Nazwa gry:</label>
                 <input type="text" id="game_name" name="game_name" required>
                 <br>
@@ -45,7 +53,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
                 <input type="submit" value="Dodaj gre">
             </form>
             <br>
-            <form action="./PHP_connections/delete_game.php" method="post">
+            <form action="./remove_game.php" method="post">
                 <label for="game_name">Nazwa gry do usunięcia:</label>
                 <input type="text" id="game_name" name="game_name" required>
                 <br>
