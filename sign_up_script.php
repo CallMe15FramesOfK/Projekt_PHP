@@ -22,7 +22,7 @@ try {
 
            $stmt->execute();
 
-           header('Location: signup.php?error=Konto zostało stworzone!');
+           header('Location: sign_up.php?error=Konto zostało stworzone!');
 
 
            exit;
