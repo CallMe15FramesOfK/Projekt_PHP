@@ -99,3 +99,7 @@ footer a:hover{
     height: 100%;
     text-align: center;
 }
+
+.highlight ul li {
+    text-align: center;
+}
