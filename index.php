@@ -48,7 +48,7 @@
             <ul>
                 <?php
                 include "./PHP_connections/connection.php";
-                $sql = "SELECT * FROM games";
+                $sql = "SELECT * FROM games WHERE game_price > 50.00";
                 $result = $conn->query($sql);
                 if ($result->rowCount() > 0) {
                     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
